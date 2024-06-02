@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int xorOperation(int n, int start) {
         int[] nums=new int[n];
         int r=0;
