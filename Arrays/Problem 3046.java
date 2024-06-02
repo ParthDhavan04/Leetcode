@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public boolean isPossibleToSplit(int[] nums) {
         Arrays.sort(nums);
         for(int i=0;i<nums.length;i++){
