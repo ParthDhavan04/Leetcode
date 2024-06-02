@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int peakIndexInMountainArray(int[] arr) {
         int ans=binarySearch( arr);
         return ans;
