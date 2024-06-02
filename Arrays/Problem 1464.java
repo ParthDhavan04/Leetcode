@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int maxProduct(int[] nums) {
         int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE,n; 
         
