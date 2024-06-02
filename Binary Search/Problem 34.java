@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int[] searchRange(int[] arr, int target) {
        int []ans = {-1,-1};
        int start = search(arr,target,true);
