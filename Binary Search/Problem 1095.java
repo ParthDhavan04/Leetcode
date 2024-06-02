@@ -7,7 +7,7 @@
  * }
  */
  
-class Solution {
+class Solution{
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int peak = findPeakElement(mountainArr);
         int ans = orderAgnostic (mountainArr, target,true,0,peak);
