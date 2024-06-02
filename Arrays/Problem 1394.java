@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int findLucky(int[] arr) {
         Arrays.sort(arr);
         int k = 0;
