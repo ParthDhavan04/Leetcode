@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int[] runningSum(int[] nums) {
         
         int[] arr=new int[nums.length];
