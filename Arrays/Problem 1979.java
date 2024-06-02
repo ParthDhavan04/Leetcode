@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int findGCD(int[] nums) {
         int max1 = Integer.MIN_VALUE;  
         int min1 = Integer.MAX_VALUE, n;
