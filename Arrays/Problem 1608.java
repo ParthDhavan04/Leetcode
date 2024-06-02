@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int specialArray(int[] nums) {
         int n=nums.length;
         
