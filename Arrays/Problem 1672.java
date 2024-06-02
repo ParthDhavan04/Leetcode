@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int maximumWealth(int[][] accounts) {
         int count=Integer.MIN_VALUE;
 
