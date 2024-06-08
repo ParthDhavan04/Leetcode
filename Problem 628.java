@@ -19,7 +19,8 @@ class Solution {
                 max2 = n;
             } else if (n > max3) 
                 max3 = n;
-
+// if there are negative numbers and if I multiply two negative numbers then the resultant will be positive.
+//so we take the least and second least min as their product would be more and muliply it with max product
             if (n < min1) {
                 min2 = min1;
                 min1 = n;
@@ -28,4 +29,14 @@ class Solution {
         }
         return Math.max(max1*max2*max3, max1*min1*min2);
         }
+
+        /*
+        //By sorting
+        Arrays.sort(nums);
+        int case1 = nums[0]*nums[1]*nums[nums.length-1];//as at ind 0 and 1 ,biggest -ve integer will be there
+        int case2 = nums[nums.length-1]*nums[nums.length-2]*nums[nums.length-3];
+
+        int maxProduct = Integer.max(case1, case2);
+        return maxProduct;*/
+
  }
