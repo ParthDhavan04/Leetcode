@@ -11,6 +11,7 @@ class Solution {
 
         int maxProduct = Math.max(case1, case2);
         return maxProduct;
+}
 
 
     
@@ -39,6 +40,3 @@ class Solution {
         return Math.max(max1*max2*max3, max1*min1*min2);
         }*/
 
-       
-
- }
