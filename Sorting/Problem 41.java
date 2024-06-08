@@ -1,5 +1,7 @@
 class Solution {//AMAZON
     public int firstMissingPositive(int[] nums) {
+        //USE CYCLE SORT AS ACC TO QUES
+        //WE HAVE TO IGNORE NEGATIVE VALUES AND VALUES GREATER THAN LENGHT SO IT AUTOMATICALLY CAME IN RANGE
 
         sort(nums);
 
