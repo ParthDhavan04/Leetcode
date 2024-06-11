@@ -1,0 +1,39 @@
+class Solution {
+    public boolean isNumber(String s) {
+
+        boolean numberSeen = false;
+        boolean eSeen = false;
+        boolean decSeen = false;
+        
+        for(int i=0; i<s.length(); i++){
+
+            char ch=s.charAt(i);
+
+            if(Character.isDigit(ch)){
+                numberSeen=true;
+            }
+            else if(ch=='e' || ch=='E'){
+                if(eSeen || !numberSeen){
+                    return false;
+                }
+                eSeen=true;
+                numberSeen=false;
+            }
+            else if(ch=='.'){
+                if(decSeen || eSeen){
+                    return false;
+                }
+                decSeen=true;
+            }
+            else if(ch=='-' || ch =='+'){
+                if(i>0 && s.charAt(i-1)!= 'e' && s.charAt(i - 1) != 'E')
+                return false;
+            }
+            else{
+                return false;
+            }
+
+        }
+        return numberSeen;
+    }
+}
