@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int binaryGap(int n) {
         int count = 0, max = 0;
         int oneIndex = Integer.MAX_VALUE;
