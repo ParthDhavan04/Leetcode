@@ -7,8 +7,6 @@ class Solution {
 
         public int queens(boolean[][] board, int row) {
         if (row == board.length) {
-            // display(board);
-            // System.out.println();
             return 1;
         }
 
