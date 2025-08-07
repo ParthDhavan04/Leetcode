@@ -1,32 +1,39 @@
 class Solution {
     public int myAtoi(String s) {
 
-       s = s.trim();
+        // Step 1: Remove leading and trailing whitespaces
+        s = s.trim();
         if (s.isEmpty()) 
-        return 0;
-        
-        int i = 0;
-        int sign = 1;
+            return 0; // Return 0 if string is empty after trimming
 
+        int i = 0;            // Pointer to iterate through the string
+        int sign = 1;         // By default, assume number is positive
+
+        // Step 2: Check for sign character
         if (s.charAt(0) == '-') {
-            sign = -1;
+            sign = -1;        // If '-' is found, set sign to negative
             i++;
+        } else if (s.charAt(0) == '+') {
+            i++;              // If '+' is found, continue without changing sign
         }
 
-        else if (s.charAt(0) == '+') 
-        i++;  //by default sign is +1
+        int result = 0;       // This will store the final integer value
 
-        int result = 0;
-
+        // Step 3: Iterate through characters while they are digits
         while (i < s.length() && Character.isDigit(s.charAt(i))) {
-            int digit = s.charAt(i) - '0';  //convert char to int
+            int digit = s.charAt(i) - '0';  // Convert character to integer
 
-         if (result > (Integer.MAX_VALUE - digit) / 10) //exceeds range
-         return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-            
-         result = result * 10 + digit;
-         i++;
+            // Step 4: Check for overflow/underflow before adding digit
+            // If result * 10 + digit > Integer.MAX_VALUE, it will overflow
+            if (result > (Integer.MAX_VALUE - digit) / 10) {
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+
+            result = result * 10 + digit; // Add digit to result
+            i++;                          // Move to next character
         }
+
+        // Step 5: Apply sign to result and return
         return result * sign;
     }
 }
